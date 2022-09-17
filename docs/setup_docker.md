@@ -2,7 +2,8 @@
 
 ## Setup full application using Docker
 
-1. Ensure `Node` and `npx` are installed.
+1. Ensure `Docker`, `Node` and `npx` are installed.
+   Docker installation: https://docs.docker.com/get-docker/
 2. Clone/Pull repo from Github.
 3. Install Python Poetry:
     ```
@@ -22,6 +23,6 @@
     docker-compose up
     ```
 
-5. Check that backend is functional at `http://localhost:8000` and check API docs is available at `http://localhost:8000/docs`.
+5. Check that backend is functional at http://localhost:8000 and check API docs is available at http://localhost:8000/docs.
 
-6. Check frontend works at `http://localhost:3000`.
+6. Check frontend works at http://localhost:3000.
