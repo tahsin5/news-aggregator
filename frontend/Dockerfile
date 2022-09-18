@@ -2,14 +2,11 @@ FROM node:lts-alpine as build-step
 
 WORKDIR /app
 
-ENV PATH /app/node_modules/.bin:$PATH
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
-COPY package.json  ./
-COPY ./src ./src
-COPY ./public ./public
+ADD . .
 
 RUN npm install
-RUN npm run build
 
-EXPOSE 3000
-# CMD ["npm", "start"]
+# CMD ["npm", "run", "dev", "--", "--host"]
